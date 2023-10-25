@@ -1,0 +1,16 @@
+/* CSS untuk form */
+.custom-label {
+    background-color: #000000; /* Warna latar belakang label */
+    padding: 10px; /* Ruang di dalam label */
+    border: 1px solid #4f7397; /* Garis pinggir label */
+    border-radius: 5px; /* Sudut label yang melengkung */
+    display: inline-block; /* Membuat label dan input tampil dalam satu baris */
+    width: 100px; /* Lebar label */
+    margin-bottom: 10px; /* Berikan margin bawah agar terlihat rapi */
+}
+
+/* CSS untuk input form */
+.form-control {
+    width: calc(100% - 120px); /* Lebar input form diatur agar sesuai dengan lebar sisa kolom */
+    display: inline-block; /* Membuat input tampil dalam satu baris dengan label */
+}

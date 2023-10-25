@@ -1,0 +1,65 @@
+<div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item">
+                    <img class="position-relative rounded-circle bg-white shadow mx-auto" src="img/testimonial-1.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1; display: flex; align-items: center; justify-content: center;" alt="">
+                    <div class="bg-light text-center p-4 pt-0">
+                        <h5 class="font-weight-medium mt-5">Bintang Ramadhan</h5>
+                        <p class="text-muted font-italic">Mahasiswa</p>
+                        <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor ipsum clita</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <img class="position-relative rounded-circle bg-white shadow mx-auto" src="img/testimonial-2.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1; display: flex; align-items: center; justify-content: center;" alt="">
+                    <div class="bg-light text-center p-4 pt-0">
+                        <h5 class="font-weight-medium mt-5">Zaskia Syifa</h5>
+                        <p class="text-muted font-italic">Mahasiswa</p>
+                        <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor ipsum clita</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <img class="position-relative rounded-circle bg-white shadow mx-auto" src="img/testimonial-3.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1; display: flex; align-items: center; justify-content: center;" alt="">
+                    <div class="bg-light text-center p-4 pt-0">
+                        <h5 class="font-weight-medium mt-5">Zefri Rifqy Alimsyah</h5>
+                        <p class="text-muted font-italic">Mahasiswa</p>
+                        <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor ipsum clita</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <img class="position-relative rounded-circle bg-white shadow mx-auto" src="img/testimonial-4.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1; display: flex; align-items: center; justify-content: center;" alt="">
+                    <div class="bg-light text-center p-4 pt-0">
+                        <h5 class="font-weight-medium mt-5">Febyola Dian Irawati</h5>
+                        <p class="text-muted font-italic">Perawat</p>
+                        <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor ipsum clita</p>
+                    </div>
+                </div>
+            </div>
+
+var testimonialItems = document.querySelectorAll('.testimonial-item');
+var currentTestimonialIndex = 0;
+
+function showTestimonial(index) {
+    // Sembunyikan semua testimoni
+    testimonialItems.forEach(function(item) {
+        item.style.display = 'none';
+    });
+
+    // Tampilkan testimoni yang dipilih
+    testimonialItems[index].style.display = 'block';
+}
+
+function showNextTestimonial() {
+    // Sembunyikan testimonial saat ini
+    testimonialItems[currentTestimonialIndex].style.display = 'none';
+
+    // Pindah ke testimonial berikutnya
+    currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonialItems.length;
+
+    // Tampilkan testimonial berikutnya
+    testimonialItems[currentTestimonialIndex].style.display = 'block';
+}
+
+// Tampilkan testimoni pertama saat halaman dimuat
+showTestimonial(0);
+
+// Atur interval untuk memanggil fungsi showNextTestimonial setiap 3 detik
+var carouselInterval = setInterval(showNextTestimonial, 3000); // Ganti testimonial setiap 3 detik
+
