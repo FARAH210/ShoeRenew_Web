@@ -58,7 +58,6 @@
   font-size: 15px;
   text-transform: none;
 }
-
 .container form .row .col .inputBox input:focus{
   border:1px solid #c6c6c6;
 }
